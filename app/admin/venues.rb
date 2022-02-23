@@ -1,5 +1,7 @@
 ActiveAdmin.register Venue do
 
+ permit_params :venue, :address, :neighborhood, :google_maps_url
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
