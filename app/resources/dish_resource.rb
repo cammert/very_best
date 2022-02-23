@@ -8,6 +8,9 @@ class DishResource < ApplicationResource
 
   # Direct associations
 
+  has_many   :fans,
+             resource: LikeResource
+
   # Indirect associations
 
 end
