@@ -2,12 +2,12 @@ class Dish < ApplicationRecord
   # Direct associations
 
   belongs_to :restaurant,
-             :class_name => "Venue",
-             :foreign_key => "venue_id"
+             class_name: "Venue",
+             foreign_key: "venue_id"
 
   has_many   :fans,
-             :class_name => "Like",
-             :dependent => :nullify
+             class_name: "Like",
+             dependent: :nullify
 
   # Indirect associations
 
@@ -18,5 +18,4 @@ class Dish < ApplicationRecord
   def to_s
     dish
   end
-
 end

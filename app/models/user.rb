@@ -2,8 +2,8 @@ class User < ApplicationRecord
   # Direct associations
 
   has_many   :favorite_foods,
-             :class_name => "Like",
-             :dependent => :destroy
+             class_name: "Like",
+             dependent: :destroy
 
   # Indirect associations
 
@@ -14,5 +14,4 @@ class User < ApplicationRecord
   def to_s
     name
   end
-
 end

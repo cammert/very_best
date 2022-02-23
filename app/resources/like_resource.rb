@@ -18,7 +18,7 @@ class LikeResource < ApplicationResource
 
   filter :venue_id, :integer do
     eq do |scope, value|
-      scope.eager_load(:restaurant).where(:dishes => {:venue_id => value})
+      scope.eager_load(:restaurant).where(dishes: { venue_id: value })
     end
   end
 end

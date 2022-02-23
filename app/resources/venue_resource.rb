@@ -21,5 +21,4 @@ class VenueResource < ApplicationResource
       end
     end
   end
-
 end

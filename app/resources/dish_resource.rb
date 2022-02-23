@@ -16,5 +16,4 @@ class DishResource < ApplicationResource
              resource: LikeResource
 
   # Indirect associations
-
 end

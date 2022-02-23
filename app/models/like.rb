@@ -4,14 +4,14 @@ class Like < ApplicationRecord
   belongs_to :user
 
   belongs_to :dish,
-             :required => false,
-             :counter_cache => :fans_count
+             optional: true,
+             counter_cache: :fans_count
 
   # Indirect associations
 
   has_one    :restaurant,
-             :through => :dish,
-             :source => :restaurant
+             through: :dish,
+             source: :restaurant
 
   # Validations
 
@@ -20,5 +20,4 @@ class Like < ApplicationRecord
   def to_s
     user.to_s
   end
-
 end
