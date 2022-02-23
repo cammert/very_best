@@ -1,32 +1,18 @@
-<!-- Form dish start -->
 <%= form_with(model: @dish, local: true) do |f| %>
-<!-- Form dish end -->
 
-  <!-- Label and input for dish start -->
   <div class="form-group">
     <%= f.label :dish %>
 
-    <!-- Input for dish start -->
     <%= f.text_field :dish, class: "form-control" %>
-    <!-- Input for dish end -->
   </div>
-  <!-- Label and input for dish end -->
 
-  <!-- Label and input for venue_id start -->
-  <!-- Input for venue_id start -->
   <%= f.hidden_field :venue_id, value: @venue.id %>
-  <!-- Input for venue_id end -->
-  <!-- Label and input for venue_id end -->
 
-  <!-- Label and input for dish_type start -->
   <div class="form-group">
     <%= f.label :dish_type %>
 
-    <!-- Input for dish_type start -->
     <%= f.text_field :dish_type, class: "form-control" %>
-    <!-- Input for dish_type end -->
   </div>
-  <!-- Label and input for dish_type end -->
 
   <%= f.submit "Create dish", class: "btn btn-block btn-outline-secondary" %>
 <% end %>
