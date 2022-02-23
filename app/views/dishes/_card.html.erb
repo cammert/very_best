@@ -12,7 +12,11 @@
 
       <dt>Venue</dt>
       <!-- Display venue_id start -->
-      <dd><%= dish.venue_id %></dd>
+      <dd>
+        <% if @dish.restaurant.present? %>
+          <%= link_to dish.restaurant, dish.restaurant %>
+        <% end %>
+      </dd>
       <!-- Display venue_id end -->
 
       <dt>Dish type</dt>
