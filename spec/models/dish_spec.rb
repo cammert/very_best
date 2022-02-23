@@ -4,6 +4,8 @@ RSpec.describe Dish, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:restaurant) }
+
     it { should have_many(:fans) }
 
     end

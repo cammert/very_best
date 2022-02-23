@@ -1,6 +1,10 @@
 class Venue < ApplicationRecord
   # Direct associations
 
+  has_many   :menu_items,
+             :class_name => "Dish",
+             :dependent => :destroy
+
   # Indirect associations
 
   # Validations
