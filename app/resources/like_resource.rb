@@ -13,4 +13,12 @@ class LikeResource < ApplicationResource
 
   # Indirect associations
 
+  has_one    :restaurant,
+             resource: VenueResource
+
+  filter :venue_id, :integer do
+    eq do |scope, value|
+      scope.eager_load(:restaurant).where(:dishes => {:venue_id => value})
+    end
+  end
 end

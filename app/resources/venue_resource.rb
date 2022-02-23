@@ -14,4 +14,12 @@ class VenueResource < ApplicationResource
 
   # Indirect associations
 
+  has_many :fans, resource: LikeResource do
+    assign_each do |venue, likes|
+      likes.select do |l|
+        l.id.in?(venue.fans.map(&:id))
+      end
+    end
+  end
+
 end
