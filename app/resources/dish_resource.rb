@@ -8,6 +8,10 @@ class DishResource < ApplicationResource
 
   # Direct associations
 
+  belongs_to :restaurant,
+             resource: VenueResource,
+             foreign_key: :venue_id
+
   has_many   :fans,
              resource: LikeResource
 

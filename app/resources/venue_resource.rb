@@ -9,6 +9,9 @@ class VenueResource < ApplicationResource
 
   # Direct associations
 
+  has_many   :menu_items,
+             resource: DishResource
+
   # Indirect associations
 
 end
