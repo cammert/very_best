@@ -7,6 +7,10 @@ class Venue < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :fans,
+             :through => :menu_items,
+             :source => :fans
+
   # Validations
 
   # Scopes

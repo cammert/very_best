@@ -9,6 +9,10 @@ class Like < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :restaurant,
+             :through => :dish,
+             :source => :restaurant
+
   # Validations
 
   # Scopes
